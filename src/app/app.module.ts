@@ -18,8 +18,8 @@ import { CoreModule } from './core/core.module';
     BrowserModule,
     CoreModule,
     SharedModule,
-    HomeModule,
-    AuthModule,
+    HomeModule, // 包括了 HomeModule , 所以 HomeModule 下的路由也会一起包括进来.
+    AuthModule, // 验证相关的 Module 页面
     AppRoutingModule
   ],
   providers: [],

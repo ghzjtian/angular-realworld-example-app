@@ -17,6 +17,7 @@ export class FavoriteButtonComponent {
   ) {}
 
   @Input() article: Article;
+    // 通知父类做出改变
   @Output() toggle = new EventEmitter<boolean>();
   isSubmitting = false;
 
@@ -37,6 +38,7 @@ export class FavoriteButtonComponent {
           .pipe(tap(
             data => {
               this.isSubmitting = false;
+
               this.toggle.emit(true);
             },
             err => this.isSubmitting = false

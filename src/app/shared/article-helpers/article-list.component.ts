@@ -27,6 +27,7 @@ export class ArticleListComponent {
   currentPage = 1;
   totalPages: Array<number> = [1];
 
+  // 点击下面的 view 导航按钮.
   setPageTo(pageNumber) {
     this.currentPage = pageNumber;
     this.runQuery();

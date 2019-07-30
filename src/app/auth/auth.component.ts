@@ -12,6 +12,8 @@ export class AuthComponent implements OnInit {
   authType: String = '';
   title: String = '';
   errors: Errors = {errors: {}};
+
+  // 在提交时，不可以编辑 表单.
   isSubmitting = false;
   authForm: FormGroup;
 
@@ -21,6 +23,7 @@ export class AuthComponent implements OnInit {
     private userService: UserService,
     private fb: FormBuilder
   ) {
+
     // use FormBuilder to create a form group
     this.authForm = this.fb.group({
       'email': ['', Validators.required],
