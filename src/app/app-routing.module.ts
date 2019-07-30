@@ -4,7 +4,8 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 const routes: Routes = [
   {
     path: 'settings',
-    loadChildren: './settings/settings.module#SettingsModule'
+    //  在加上了路径后，必须还需要添加上 Module 的名字.
+    loadChildren: './settings/settings.module#SettingsModule2'
   },
   {
     path: 'profile',
