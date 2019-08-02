@@ -25,7 +25,7 @@ export class UserService {
   // Verify JWT in localstorage with server & load user's info.
   // This runs once on application startup.
   populate() {
-    // TODO: 不知道这里的 JWT 是怎么传送到 请求体中的.
+    // TODO: 不知道这里的 JWT 是怎么传送到 请求体中的. 答： 通过注入
     // If JWT detected, attempt to get & store user's info
     if (this.jwtService.getToken()) {
       this.apiService.get('/user')

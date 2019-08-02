@@ -4,6 +4,8 @@ import { Observable } from 'rxjs';
 
 import { JwtService } from '../services';
 
+
+// 这里依赖注入.每个 HTTP 的请求都会带上这里的 Header.
 @Injectable()
 export class HttpTokenInterceptor implements HttpInterceptor {
   constructor(private jwtService: JwtService) {}
@@ -19,6 +21,8 @@ export class HttpTokenInterceptor implements HttpInterceptor {
     if (token) {
       headersConfig['Authorization'] = `Token ${token}`;
     }
+
+
 
     const request = req.clone({ setHeaders: headersConfig });
     return next.handle(request);

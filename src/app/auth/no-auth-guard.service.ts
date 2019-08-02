@@ -17,6 +17,7 @@ export class NoAuthGuard implements CanActivate {
     state: RouterStateSnapshot
   ): Observable<boolean> {
 
+    // 取得现在用户验证的状态，如果是已经登录了的，就不允许到这个网站.
     return this.userService.isAuthenticated.pipe(take(1), map(isAuth => !isAuth));
 
   }

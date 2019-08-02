@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    // 一开始就验证用户的权限信息.
     this.userService.populate();
   }
 }

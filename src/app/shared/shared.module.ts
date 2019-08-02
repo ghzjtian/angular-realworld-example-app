@@ -27,6 +27,7 @@ import { ShowAuthedDirective } from './show-authed.directive';
     ShowAuthedDirective
   ],
   exports: [
+
     ArticleListComponent,
     ArticleMetaComponent,
     ArticlePreviewComponent,
